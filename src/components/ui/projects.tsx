@@ -43,20 +43,21 @@ export default function ProjectsPage() {
       <section className="bg-gruvbox_gray-medium border-t-2 border-b-2 border-gray-400 py-7">
         <section
           id="projects"
-          className="pl-50  flex justify-start items-start"
+          className="md:pl-50 text-center md:text-start  flex justify-center md:justify-start md:items-start"
         >
           <div className="max-w-6xl">
-            <h1 className="text-5xl font-bold text-gruvbox_yellow to-accent bg-clip-text">
+            <h1 className="text-3xl md:text-5xl font-bold text-gruvbox_yellow to-accent bg-clip-text">
               My Projects
             </h1>
-            <p className="text-[#d0c1be] pt-3 text-xl text-muted-foreground max-w-6xl mx-auto">
+            <p className="text-[#d0c1be] pt-3 text-sm md:text-xl text-muted-foreground max-w-6xl mx-auto">
               A collection of projects that showcase my skills in web
               development.
             </p>
           </div>
         </section>
-        <div className="max-w-5xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 pt-6">
+
+        <div className="px-8 md:p-0 max-w-5xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-12 pt-6">
             {projects.map((project) => (
               <Card
                 key={project.id}
@@ -75,21 +76,21 @@ export default function ProjectsPage() {
                   </div>
 
                   <CardHeader>
-                    <h3 className="mt-5 text-2xl font-bold text-gruvbox_yellow group-hover:text-primary transition-colors">
+                    <h3 className="mt-5 text-lg md:text-2xl font-bold text-gruvbox_yellow group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-[#a88b87] leading-relaxed">
+                    <p className="text-sm md:text-2xl text-[#a88b87] leading-relaxed">
                       {project.description}
                     </p>
                   </CardHeader>
                 </section>
                 <CardContent className="space-y-4">
-                  <div className="flex flex-wrap justify-around w-full">
+                  <div className="flex flex-wrap gap-2 md:gap-0 justify-around w-full">
                     {project.technologies.map((tech) => (
                       <Badge
                         key={tech}
                         variant="secondary"
-                        className="bg-cyan-900 text-blue-300 font-bold border border-blue-600"
+                        className="text-xs bg-cyan-900 text-blue-300 font-bold border border-blue-600"
                       >
                         {tech}
                       </Badge>
@@ -100,7 +101,7 @@ export default function ProjectsPage() {
                     <Button
                       asChild
                       size="sm"
-                      className=" flex items-center justify-center border border-amber-700 p-5 w-5/12 text-gray-900 bg-amber-700 text-lg hover:bg-gray-900 hover:text-amber-600 hover:border-amber-600"
+                      className=" flex items-center justify-center border border-amber-700 p-2 md:p-5 w-5/12 text-gray-900 bg-amber-700 text-sm md:text-lg hover:bg-gray-900 hover:text-amber-600 hover:border-amber-600"
                     >
                       <Link
                         href={project.liveUrl}
@@ -111,7 +112,7 @@ export default function ProjectsPage() {
                       </Link>
                     </Button>
                     <Button
-                      className="p-5 w-5/12 border border-amber-50 text-lg hover:bg-gray-300 hover:text-gray-900"
+                      className="p-2 md:p-5 w-5/12 border border-amber-50 text-sm md:text-lg hover:bg-gray-300 hover:text-gray-900"
                       asChild
                       variant="outline"
                       size="sm"

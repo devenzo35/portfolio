@@ -1,12 +1,34 @@
 import Link from "next/link";
+import { getPosts, getPostBySlug } from "../../lib/posts";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
-export default function BlogPage() {
+export default function Blog() {
+  const posts = getPosts();
+
+  console.log(posts);
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold mb-4">Blog</h1>
-      <p className="text-lg mb-8">Próximamente...</p>
-      <div className="space-x-4">
-        <Link href="/" className="px-4 py-2 bg-blue-500 text-white rounded">Volver al Inicio</Link>
+    <div className="max-w-5xl mx-auto px-6 py-12">
+      <h1 className="text-4xl font-bold mb-10">Blog</h1>
+      <div className="grid gap-6 md:grid-cols-2">
+        {posts.map((post, index) => (
+          <Card
+            key={index}
+            className="rounded-2xl shadow-md hover:shadow-lg transition"
+          >
+            <CardHeader>
+              <CardTitle className="text-xl">{post.title}</CardTitle>
+              <p className="text-sm text-gray-500">{post.date}</p>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-700 mb-4">{post.description}</p>
+              <Link href={`/blog/${post.slug}`}>
+                <Button>Read more</Button>
+              </Link>
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </div>
   );

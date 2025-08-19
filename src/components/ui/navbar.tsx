@@ -10,9 +10,9 @@ export default function Navbar() {
   // Navigation items
   const navItems = [
     { id: "home", label: "Home", link: "/" },
-    { id: "about", label: "About", link: "/about" },
+    { id: "about", label: "About", link: "#about" },
     { id: "projects", label: "Projects", link: "#projects" },
-    { id: "blog", label: "Blog", link: "/blog" },
+    // { id: "blog", label: "Blog", link: "/blog" },
   ];
 
   // Handle scroll effect

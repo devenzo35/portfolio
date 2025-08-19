@@ -47,24 +47,24 @@ export default function Home() {
       <div className="h-auto flex flex-col items-center justify-center bg-gruvbox_gray-soft">
         <section className="flex flex-col-reverse md:flex-row items-center  max-w-6xl w-full gap-12 py-16 md:py-24">
           {/* Texto */}
-          <div className="flex-1 text-center md:text-left">
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-[#fbf1c7]">
+          <div className="flex-1 text-center w-10/12 md:text-left">
+            <h1 className="text-2xl md:text-4xl sm:text-5xl font-extrabold text-[#fbf1c7]">
               Enzo Cuellar
             </h1>
-            <h2 className="mt-2 text-2xl font-semibold text-gruvbox_yellow italic">
+            <h2 className="mt-2 text-sm sm:text-2xl font-semibold text-gruvbox_yellow italic">
               Backend & Data Engineer — diseño sistemas escalables y pipelines
               de datos robustos.
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-[#d5c4a1]">
+            <p className="mt-4 text-sm md:text-lg leading-relaxed text-[#d5c4a1]">
               I specialize in building scalable APIs, automating data pipelines,
               and designing backend systems that perform under pressure. My goal
               is to turn complex problems into efficient and maintainable
               solutions.
             </p>
-            <div className="mt-6 flex flex-col sm:flex-row gap-4 sm:justify-start justify-center">
+            <div className="mt-6 items-center flex flex-col sm:flex-row gap-4 sm:justify-start sm:items-start justify-center ">
               <a
                 href="/projects"
-                className="flex items-center justify-center text-nowrap px-6 py-3 bg-gruvbox_green text-[#282828] rounded-lg hover:bg-[#b8bb26] transition-colors font-medium"
+                className=" w-9/12 md:w-full flex items-center justify-center text-nowrap px-6 py-3 bg-gruvbox_green text-[#282828] rounded-lg hover:bg-[#b8bb26] transition-colors font-medium"
               >
                 View My Work
               </a>
@@ -92,7 +92,7 @@ export default function Home() {
               </div>
 
               <div className="flex w-8/12 ">
-                <ul className="flex gap-4 w-full p-2 ">
+                <ul className="flex gap-4 w-full p-2 justify-center md:justify-start">
                   <Link
                     href={"https://github.com/devenzo35"}
                     target="_blank"
@@ -123,14 +123,14 @@ export default function Home() {
                 priority
               />
             </div>
-            <div className="flex w-7/12 justify-around rounded-2xl  bg-gruvbox_gray-hard border-1 border-gruvbox_yellow">
-              <ul className="w-full p-2 flex justify-around text-3xl">
+            <div className="flex w-11/12 md:w-6/12 justify-around rounded-2xl  bg-gruvbox_gray-hard border-1 border-gruvbox_yellow">
+              <ul className="w-full p-2 flex justify-around text-lg md:text-3xl">
                 <PythonOriginal />
                 <Postgresql />
-                <SiDocker className="w-7 h-7 text-[#2496ed]" />
-                <SiFastapi className="w-7 h-7 text-[#009688]" />
-                <SiMongodb className="w-7 h-7 text-[#009688]" />
-                <SiAmazonwebservices className="w-7 h-7 text-orange-500" />
+                <SiDocker className=" text-[#2496ed]" />
+                <SiFastapi className="  text-[#009688]" />
+                <SiMongodb className=" text-[#009688]" />
+                <SiAmazonwebservices className=" text-orange-500" />
               </ul>
             </div>
           </div>
@@ -151,8 +151,8 @@ export default function Home() {
         )}
       </div>
       <ProjectsPage />
-      <AboutPage />
       <TechStack />
+      <AboutPage />
     </>
   );
 }

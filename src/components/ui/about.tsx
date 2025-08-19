@@ -19,22 +19,27 @@ import {
 
 export default function AboutPage() {
   return (
-    <section className="min-h-screen w-full text-gruvbox_yellow bg-gruvbox_gray-soft">
+    <section className="min-h-screen w-full pt-6 text-gruvbox_yellow bg-gruvbox_gray-soft">
       <section
         id="projects"
-        className="pl-50  flex justify-start items-start text-gruvbox_yellow"
+        className="md:pl-50 pt-5 md:pt-0 text-center md:text-start  flex justify-center md:justify-start md:items-start"
       >
-        <div className="max-w-6xl py-5">
-          <h1 className="text-5xl font-bold  to-accent bg-clip-text">
+        <div className="max-w-6xl">
+          <h1
+            id="about"
+            className="text-3xl md:text-5xl font-bold text-gruvbox_yellow to-accent bg-clip-text"
+          >
             About me
           </h1>
-          <p className="text-[#d0c1be] pt-3 text-xl text-muted-foreground max-w-6xl mx-auto">
-            Where I come from, what drives me, and where I’m headed.
+          <p className="text-[#d0c1be] pt-3 text-sm md:text-xl text-muted-foreground w-10/12 md:w-full max-w-6xl mx-auto">
+            Where I come from, what drives me, and where I’m headed. A
+            collection of projects that showcase my skills in web development.
           </p>
         </div>
       </section>
-      <div className="flex justify-around items-center flex-wrap pt-5 px-26">
-        <section className="w-5/12 flex-col justify-center items-center">
+
+      <div className="flex sm:flex-col md:flex-row  justify-around items-center flex-wrap pt-5 px-10 md:px-26">
+        <section className="w-full md:w-5/12  flex-col justify-center items-center text-sm">
           <div className="flex justify-center">
             <div className=" text-amber-100">
               <Card className="bg-gruvbox_gray-hard border-gruvbox-gray flex justify-center">
@@ -43,7 +48,7 @@ export default function AboutPage() {
                     <CardTitle className="text-gruvbox-orange text-2xl">
                       Backend Developer
                     </CardTitle>
-                    <CardDescription className="text-gruvbox-fg-dim text-base">
+                    <CardDescription>
                       Passionate about designing clean and reliable systems.
                       Specialized in building APIs and database architectures
                       that bring order and clarity to complex problems.
@@ -87,7 +92,7 @@ export default function AboutPage() {
         </section>
 
         {/* Container */}
-        <div className="w-4/12 flex flex-col gap-12 items-center ">
+        <div className="w-full md:w-4/12 py-10  md:py-0 flex flex-col gap-12 items-center ">
           {/* Professional values */}
           <section>
             <h2 className="text-2xl font-bold mb-4 text-amber-500 underline decoration-solid">
