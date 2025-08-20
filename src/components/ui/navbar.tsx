@@ -63,7 +63,7 @@ export default function Navbar() {
     <>
       {/* Navbar */}
       <nav
-        className={`bg-gruvbox_gray-soft flex justify-center items-center h-fit top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/20`}
+        className={`fixed md:relative md:bg-gruvbox_gray-soft flex justify-center items-center w-1/12 md:w-full h-fit top-0 right-0 md:z-50 transition-all duration-300 md:border-b border-white/20`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -74,7 +74,7 @@ export default function Navbar() {
                   <button
                     className={`relative text-sm font-medium py-2 px-1 transition-all duration-300 capitalize ${
                       activeLink === item.id
-                        ? "text-red-600"
+                        ? "text-[#fbf1c7] hover:text-red-600"
                         : "text-[#fbf1c7] hover:text-red-600"
                     }`}
                   >
@@ -114,22 +114,18 @@ export default function Navbar() {
 
           {/* Mobile Navigation Menu */}
           <div
-            className={`md:hidden transition-all duration-300 bg-white/98 backdrop-blur-xl border-t border-gray-100 ${
+            className={`fixed z-50 w-full h-fit top-0 bottom-0 left-0 right-0 md:hidden transition-all duration-300 bg-gruvbox_gray-medium text-amber-50  border-t border-gray-100 ${
               isMobileMenuOpen
-                ? "opacity-100 visible translate-y-0 max-h-96"
+                ? "opacity-100 visible z-50 translate-y-0 max-h-96"
                 : "opacity-0 invisible -translate-y-4 max-h-0"
             } overflow-hidden`}
           >
-            <div className="px-4 pt-4 pb-6 space-y-1">
+            <div className="space-y-1">
               {navItems.map((item) => (
                 <button
                   onClick={handleLinkClick}
                   key={item.id}
-                  className={`w-full text-left font-medium py-3 px-4 transition-all duration-300 border-l-4 capitalize rounded-r-lg ${
-                    activeLink === item.id
-                      ? "text-indigo-600 border-indigo-600 bg-indigo-50"
-                      : "text-gray-600 hover:text-indigo-600 border-transparent hover:border-indigo-600 hover:bg-gray-50"
-                  }`}
+                  className={`w-full text-left font-medium py-3 px-4 transition-all duration-300 border-l-4 capitalize rounded-r-lg  `}
                 >
                   <Link href={item.link}>{item.label}</Link>
                 </button>
