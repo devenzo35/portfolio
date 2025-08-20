@@ -52,8 +52,7 @@ export default function Home() {
               Enzo Cuellar
             </h1>
             <h2 className="mt-2 text-sm sm:text-2xl font-semibold text-gruvbox_yellow italic">
-              Backend & Data Engineer — diseño sistemas escalables y pipelines
-              de datos robustos.
+              Backend & Data Engineer
             </h2>
             <p className="mt-4 text-sm md:text-lg leading-relaxed text-[#d5c4a1]">
               I specialize in building scalable APIs, automating data pipelines,
