@@ -61,12 +61,13 @@ export default function Home() {
               is to turn complex problems into efficient and maintainable
               solutions.
             </p>
-            <div className="mt-6 items-center flex flex-col sm:flex-row gap-4 sm:justify-start sm:items-start justify-center ">
+            <div className="mt-6 items-center flex flex-col sm:flex-row gap-4 sm:justify-start justify-center ">
               <a
-                href="/projects"
-                className=" w-9/12 md:w-full flex items-center justify-center text-nowrap px-6 py-3 bg-gruvbox_green text-[#282828] rounded-lg hover:bg-[#b8bb26] transition-colors font-medium"
+                href="/resume_2025_07_22.pdf"
+                className=" w-9/12 md:w-full md:text-md flex items-center justify-center text-nowrap px-6 py-3.5 bg-gruvbox_green text-gray-800 rounded-lg border hover:bg-gray-900 hover:text-green-200 hover:border-gruvbox_green transition-colors font-black"
+                download
               >
-                View My Work
+                Download Resume
               </a>
 
               <div>
@@ -137,11 +138,11 @@ export default function Home() {
         </section>
         {copied ? (
           <Alert
-            className="fixed flex text-md items-center justify-center border-0  text-white text-center top-20 right-0 left-0"
+            className="fixed flex text-xs md:text-md items-center justify-center border-0  text-white text-center top-10 md:top-20 right-0 left-0"
             variant="destructive"
           >
-            <AlertTitle className="rounded-sm w-8/12 p-3 border-2 border-gruvbox_blue  bg-gruvbox_blue ">
-              <span className="p-18">
+            <AlertTitle className="rounded-sm w-full md:w-8/12 p-3 border-2 border-gruvbox_blue  bg-gruvbox_blue ">
+              <span className="md:p-18">
                 "enzocuellar12@gmail.com" copied to clipboard!
               </span>
             </AlertTitle>
